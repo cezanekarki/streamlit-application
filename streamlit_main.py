@@ -18,7 +18,7 @@ fruit_choice = streamlit.text_input('What fruit would you like information about
 streamlit.write('The user entered ', fruit_choice)
 
 streamlit.header("Fruityvice Fruit Advice!")
-fruity_vice_response = requests.get('https://fruityvice.com/api/fruit/watermelon')
+fruity_vice_response = requests.get('https://fruityvice.com/api/fruit/'+fruit_choice)
 
 # write your own comment -what does the next line do? 
 fruityvice_normalized = pd.json_normalize(fruity_vice_response.json())
