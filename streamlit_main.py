@@ -21,8 +21,8 @@ def get_food_data(food_choice_name):
    fruity_vice_response = requests.get('https://fruityvice.com/api/fruit/'+food_choice_name)
 
     # write your own comment -what does the next line do? 
-    fruityvice_normalized = pd.json_normalize(fruity_vice_response.json())
-    return fruityvice_normalized
+   fruityvice_normalized = pd.json_normalize(fruity_vice_response.json())
+   return fruityvice_normalized
 
 streamlit.header("Fruityvice Fruit Advice!")
 try:
